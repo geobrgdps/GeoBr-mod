@@ -9,6 +9,8 @@ on:
 
 jobs:
   build:
+    name: Build ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -23,14 +25,11 @@ jobs:
             os: windows-latest
             target: Win64
 
-    name: ${{ matrix.config.name }}
-    runs-on: ${{ matrix.config.os }}
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
       - name: Build Mod
-        uses: geode-sdk/build-geode-mod@v2
+        uses: geode-sdk/build-geode-mod@main
         with:
           target: ${{ matrix.config.target }}
-          
