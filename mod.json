@@ -1,0 +1,13 @@
+{
+  "geode": "2.0.0",
+  "gd": {
+    "win": "2.206",
+    "android": "2.206"
+  },
+  "id": "luiz.geobr_mod",
+  "name": "GeoBR Mod",
+  "version": "v1.0.0",
+  "developer": "Luiz & GeoBR Staff",
+  "description": "Mod oficial do GDPS GeoBR! Acesso rápido à Demon List, Discord e configurações de conexão.",
+  "dependencies": []
+}
